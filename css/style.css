@@ -1,7 +1,7 @@
 /*
 
 	SHOWPAGE FREE TEMPLATE BY IAMSUPVIEW.BE
-	
+
 	01. Font Face
 	02. Generals Settings
 	03. Navigation Settings
@@ -15,16 +15,9 @@
 	11. PRE CODE
 	12. Modal Settings
 	13. Media Queries Settings
-			
+
 */
-
-
-
-
-
 /* 01. FONT FACE ================================================== */
-
-
 @font-face
 {
   font-family: "Source Sans Pro";
@@ -56,11 +49,7 @@
     font-weight: 700;
     src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGBgDywzySrQSFSEUM6OqW_g.woff") format("woff");
 }
-
-
-	
 /* 02. GENERALS SETTINGS ================================================== */
-
 
 body, html
 {
@@ -74,7 +63,6 @@ body, html
   -moz-transition: opacity 400ms;
   transition: opacity 400ms;
 }
-
 
 /* Selected text Color */
 
@@ -177,8 +165,8 @@ a
 a:hover
 {
   color: #181b1e;
-}  
-	
+}
+
 /* Paragrah */
 
 p
@@ -265,7 +253,6 @@ p a:hover
   background: none;
 }
 
-
 /* Button Green */
 
 .button-green
@@ -297,11 +284,7 @@ p a:hover
   background: none;
 }
 
-
-
-
 /* 03. NAVIGATION SETTINGS ================================================== */
-
 
 nav #logo
 {
@@ -317,7 +300,6 @@ nav
   width: 100%;
   height: 80px;
 }
-
 
 /* The main navigation bar */
 
@@ -355,9 +337,8 @@ nav
   color: rgba(255,255,255,0.60);
 }
 
- 
-/* Navigation Fixed */ 
- 
+/* Navigation Fixed */
+
 .cbp-af-header
 {
   font-family: 'Source Sans Pro', sans-serif;
@@ -420,9 +401,7 @@ nav
   background: none;
 }
 
-
 /* Navigation effect on scroll down */
-
 
 .cbp-af-header.cbp-af-header-shrink
 {
@@ -449,16 +428,12 @@ nav
 {
   margin-top: -150px;
 }
-	
-
 
 /* 04. PAGE 1 / HEADER SETTINGS ================================================== */
 
-
-
 .page1
 {
-  background: url('../img/bg.jpg')#131313;
+  background: url('../img/bg.jpg')#131313 no-repeat center center fixed;
   background-size: cover;
   height: 100%;
   position: relative;
@@ -468,8 +443,6 @@ nav
 {
   color: #FFF;
 }
-
-
 /* Don't display the logo for Phone */
 
 .logo-phone {display: none;}
@@ -503,27 +476,23 @@ nav
 
 /* 05. PAGE 2 SETTINGS ================================================== */
 
-
-
 .page2 {
     background: #FFF;}
 
 .page2 .row {
-	position: relative;  
-	border-bottom: 1px solid #e7e9eb;   
+	position: relative;
+	border-bottom: 1px solid #e7e9eb;
 	padding: 80px 0 80px 0;}
-
 
 /* Image */
 
 .page2 .picture {
-	position: relative; 
-	width: 100%;  
-	overflow: hidden; 
+	position: relative;
+	width: 100%;
+	overflow: hidden;
 	float: right; }
 
-
-/* Article */
+  /* Article */
 
 .page2 .article {
 	position: absolute;
@@ -535,26 +504,21 @@ nav
     left: 0%;
 }
 
-
-
 /* 06. PAGE 3 SETTINGS ================================================== */
-
-
-
 
 .page3 {
     background: #FFF;}
 
 .page3 .row {
-	position: relative; 
-	border-bottom: 1px solid #e7e9eb;  
+	position: relative;
+	border-bottom: 1px solid #e7e9eb;
 	padding: 80px 0;}
 
 /* Image */
 
 .page3 .picture {
-	position: relative; 
-	width: 100%;  
+	position: relative;
+	width: 100%;
 	overflow: hidden;  }
 
 /* Article */
@@ -569,26 +533,21 @@ nav
     right:0;
 }
 
-
-
-
 /* 07. PAGE 4 SETTINGS ================================================== */
-
-
 
 .page4 {
     background: #FFF; }
 
 .page4 .row {
-	position: relative; 
+	position: relative;
 	padding: 80px 0; }
 
 /* Image */
 
 .page4 .picture {
-	position: relative; 
-	width: 100%;  
-	overflow: hidden; 
+	position: relative;
+	width: 100%;
+	overflow: hidden;
 	float: right; }
 
 /* Article */
@@ -603,10 +562,7 @@ nav
     left: 0%;
 }
 
-
-
 /* 08. PAGE 5 SETTINGS ================================================== */
-
 
 .page5 {
     background: #f1f3f4;
@@ -614,11 +570,7 @@ nav
 
 .page5 h1 {font-size:240px;}
 
-
-
-
 /* 09. PRELOADING  ================================================== */
-    
 
 /* Preloader Effect */
 
@@ -647,10 +599,7 @@ nav
     border-radius: 4px;
 }
 
-
 /* 10. FOOTER SETTINGS  ================================================== */
-
-
 
 .footer {
     background: #181b1e;
@@ -684,21 +633,17 @@ nav
 .footer p a {color: rgba(255,255,255,0.70);}
 .footer p a:hover {color: rgba(255,255,255,1);}
 
-
 /* 11 PRE CODE ================================================= */
 
-
 pre {
-	background: #333; 
-	font-size: 12px; 
-	line-height: normal; 
-	border: 10px solid #f1F3F4; 
-	padding: 20px; 
+	background: #333;
+	font-size: 12px;
+	line-height: normal;
+	border: 10px solid #f1F3F4;
+	padding: 20px;
 	color:#ecd565;}
 
-
 /* 12 MODAL SETTINGS ================================================= */
-
 
 .modal {
   display: none;
@@ -765,16 +710,9 @@ pre {
   opacity: 1;
 }
 
-
-
 /* 13. MEDIA QUERIES  ============================================ */
 
-
-
-
 @media screen and (max-width: 768px) {
-
-
 .page2, .page3, .page4, .page5 {
 	padding-left: 20px;
 	padding-right: 20px;
@@ -830,10 +768,10 @@ h1 {font-size:30px;}
 
 /* Media Queries for iPad in Portrait */
 
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) { 
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
 
 .page2 .columns, .page3 .columns, .page4 .columns {
     position: relative;
@@ -853,10 +791,4 @@ and (orientation : portrait) {
 
 .page1 .button-white {display: none;}
 
-
-
  }
-
-
-
-
