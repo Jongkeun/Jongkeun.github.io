@@ -433,7 +433,7 @@ nav
 
 .page1
 {
-  background: url('../img/bg.jpg')#131313 no-repeat center center fixed;
+  background: url('../img/bg.jpg')#131313 no-repeat center center;
   background-size: cover;
   height: 100%;
   position: relative;
