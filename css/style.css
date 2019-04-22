@@ -23,7 +23,7 @@
   font-family: "Source Sans Pro";
     font-style: normal;
     font-weight: 200;
-    src: local("Source Sans Pro ExtraLight"), local("SourceSansPro-ExtraLight"), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGEzfSP8PFPIaW8d4wHl9LSw.woff") format("woff");
+    src: local("Source Sans Pro ExtraLight"), local("SourceSansPro-ExtraLight"), url("https://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGEzfSP8PFPIaW8d4wHl9LSw.woff") format("woff");
 }
 
 @font-face
@@ -31,7 +31,7 @@
   font-family: "Source Sans Pro";
     font-style: normal;
     font-weight: 400;
-    src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/ODelI1aHBYDBqgeIAH2zlDLXPPWpYIJRcQ99gLLWTOQ.woff") format("woff");
+    src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url("https://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/ODelI1aHBYDBqgeIAH2zlDLXPPWpYIJRcQ99gLLWTOQ.woff") format("woff");
 }
 
 @font-face
@@ -39,7 +39,7 @@
   font-family: "Source Sans Pro";
     font-style: normal;
     font-weight: 600;
-    src: local("Source Sans Pro Semibold"), local("SourceSansPro-Semibold"), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGNF2eBBnhZOFf_rblGEjGiI.woff") format("woff");
+    src: local("Source Sans Pro Semibold"), local("SourceSansPro-Semibold"), url("https://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGNF2eBBnhZOFf_rblGEjGiI.woff") format("woff");
 }
 
 @font-face
@@ -47,7 +47,7 @@
   font-family: "Source Sans Pro";
     font-style: normal;
     font-weight: 700;
-    src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGBgDywzySrQSFSEUM6OqW_g.woff") format("woff");
+    src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url("https://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGBgDywzySrQSFSEUM6OqW_g.woff") format("woff");
 }
 /* 02. GENERALS SETTINGS ================================================== */
 
@@ -433,7 +433,7 @@ nav
 
 .page1
 {
-  background: url('../img/bg.jpg')#131313 no-repeat center center;
+  background: url('../img/bg.png')#131313 no-repeat center center;
   background-size: cover;
   height: 100%;
   position: relative;
