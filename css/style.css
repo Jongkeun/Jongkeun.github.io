@@ -437,6 +437,7 @@ nav
   background-size: cover;
   height: 100%;
   position: relative;
+  border: solid #6AC5AC 10px;
 }
 
 .page1 h1
