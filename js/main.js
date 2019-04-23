@@ -1,7 +1,7 @@
 /*
 
 	SHOWPAGE FREE TEMPLATE BY IAMSUPVIEW.BE
-	
+
 	01. Sticky Navbar
 	02. Modal + Pre Code
 	03. Smooth Scrolling
@@ -73,9 +73,9 @@ var modal        = document.getElementById('modal'),
     openModal    = document.querySelector('.js-open-modal'),
     closeModal   = document.querySelectorAll('.modal, .modal-close');
 
-openModal.addEventListener('click', function() {
+openModal ? openModal.addEventListener('click', function() {
   modal.classList.add('is-visible');
-});
+}) : null;
 
 [].forEach.call(closeModal, function ( el ) {
    el.addEventListener('click', function() {
@@ -84,7 +84,7 @@ openModal.addEventListener('click', function() {
 });
 
 modalContent.addEventListener('click', function ( event ) {
-  event.stopPropagation();  
+  event.stopPropagation();
 });
 
 setTimeout(function() {
@@ -94,12 +94,12 @@ setTimeout(function() {
 /*-----------------------------------------------------------------------------------*/
 /*	03. SMOOTH SCROLLING ON BUTTON
 /*-----------------------------------------------------------------------------------*/
-	
+
 
 $('.goto').click(function(e){
  e.preventDefault();
     $('html').scrollTo(this.hash,this.hash);
-   
+
 });
 
 

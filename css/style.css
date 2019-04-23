@@ -193,13 +193,13 @@ p a:hover
 
 /* Button White */
 
-.button-white
+.button-gray
 {
   border-radius: 20px;
   color: #333;
   padding: 10px 20px;
   letter-spacing: 2px;
-  background: #FFF;
+  background: #c7c7c7;
   font-weight: 600;
   border: 3px solid #FFF;
   cursor: pointer;
@@ -215,11 +215,11 @@ p a:hover
 
 /* Button White:hover */
 
-.button-white:hover
+.button-gray:hover
 {
   color: #FFF;
   border: 3px solid #FFF;
-  background: none;
+  background: #c7c7c7;
 }
 
 /* Button Blue */
@@ -725,7 +725,7 @@ pre {
 
 .picture {display: none;}
 
-.page1 .button-white {display: none;}
+.page1 .button-gray {display: none;}
 
 
 h2 {font-size: 42px;}
@@ -790,6 +790,6 @@ and (orientation : portrait) {
 
 .picture {display: none;}
 
-.page1 .button-white {display: none;}
+.page1 .button-gray {display: none;}
 
  }
