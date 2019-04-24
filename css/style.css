@@ -545,11 +545,13 @@ nav
 
 /* Image */
 
-.page4 .picture {
+.page4 .email {
 	position: relative;
 	width: 100%;
 	overflow: hidden;
-	float: right; }
+  float: right;
+  right:0;
+}
 
 /* Article */
 
@@ -563,7 +565,7 @@ nav
     left: 0%;
 }
 
-.page4 .contact {
+.page4 .email .h3{
   line-height: 60px;
 }
 
