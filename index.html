@@ -1,171 +1,19 @@
-<!doctype html>
-<html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Songpa Neighborhoods in Seoul</title>
-  <meta name="description" content="This community is social meetup. This meetup has no specify purpose. If it has to have one, that is for social gathering(?) like a neighborhood, regardless of your age, nationality and language. You don't have to worry and hesitate about coming to this meetup. Come on!" />
-  <meta name="keywords" content="Songpa, district, Bangi, Jamsil, friends, community, language, exchange, culture, meetup" />
-  <meta name="author" content="Jongkeun">
-  <!-- Favicon /-->
-  <link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon" />
-  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-  <link rel="manifest" href="img/favicon/site.webmanifest">
-  <!-- Favicon /-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-  <!-- Stylesheets /-->
-  <link rel="stylesheet" href="css/gumby.css">   			<!-- Gumby Framework /-->
-  <link rel="stylesheet" href="css/style.css">   			<!-- Main stylesheet /-->
-  <link rel="stylesheet" href="css/animate.css"> 			<!-- Animations /-->
-  <script src="js/modernizr-2.6.2.min.js"></script>  <!-- Modernizr /-->
-</head>
-<body>
-
-<!-- Preload the Whole Page -->
-  <div id="preloader">
-    <div id="loading-animation">
-      &nbsp;
-    </div>
+---
+layout: main
+---
+{% for post in paginator.posts %}
+<article class="post">
+  {% if post.img %}
+    <a class="post-thumbnail" style="background-image: url({{"/assets/img/" | prepend: site.baseurl | append : post.img}})" href="{{post.url | prepend: site.baseurl}}"></a>
+  {% else %}
+  {% endif %}
+  <div class="post-content">
+    <h2 class="post-title"><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h2>
+    <p>{{ post.content | strip_html | truncatewords: 15 }}</p>
+    <span class="post-date">{{post.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+    <span class="post-words">{% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: " minute read" }}{% endunless %}</span>
   </div>
-<!-- NAVIGATION ############################################### -->
-  <div class="cbp-af-header">
-    <nav >
-      <!-- Logo -->
-      <div id="logo">
-        <a href="#"><img alt="Logo" src="img/logo.png"></a>
-      </div>
-      <!-- Links -->
-      <ul id="nav" >
-        <li><a href="#">The Author</a></li>
-        <li><a href="#">Get it</a></li>
-      </ul>
-    </nav>
-  </div>
-<!-- END NAVIGATION ############################################### -->
+</article>
+{% endfor %}
 
-<!-- HEADER / FIRST SECTION ############################################### -->
-  <section class="page1">
-    <!-- Huge Title centered -->
-    <div class="huge-title centered">
-      <div class="logo-phone centered"><img alt="LOG" src="img/logo-phone.png"></div>  <!-- This Logo is only displayed on Tablet/iPhone !-->
-      <h1>Songpa Neighborhoods in Seoul</h1>
-      <div class="space"></div>
-      <a href="#container" class="button-gray goto">Discover more</a>
-    </div>
-    <!-- IMG DISCOVER MORE -->
-    <div class="go-down twelve columns">
-      <a href="#container" class="goto"><img src="img/down.png" alt="MORE"></a>
-    </div>
-  </section>
-<!-- END HEADER ############################################### -->
-
-<!-- BEGIN CONTAINER ############################################### -->
-  <div id="container" class="container">
-
-    <!-- SECOND SECTION ############################################### -->
-    <section class="page2">
-      <div class="row">
-        <div class="six columns article make-it-appear-right">
-          <!-- Title -->
-          <h3>Meetup</h3>
-          <!-- Content -->
-          <p>Join our community.<br/>You can see <b>What we are doing </b> and our meetup <b>schedules</b>.</p>
-          <div class="space"></div>
-          <a  class="button-blue" target="_blank" href="https://www.meetup.com/ko-KR/Songpa-Neighborhoods-in-Seoul/">Move to meetup page</a>
-        </div>
-          <!-- Image from right -->
-        <div class="five columns picture make-it-appear-left" >
-          <img src="img/1.png" alt="EXEMPLE">
-        </div>
-      </div> <!-- End row div -->
-    </section>
-    <!-- END SECOND SECTION ############################################### -->
-
-    <!-- TIRTH SECTION ############################################### -->
-    <section class="page3" >
-      <div class="row">
-        <!-- Image from left -->
-        <div class="five columns picture make-it-appear-right" >
-          <img src="img/2.png" alt="EXEMPLE">
-        </div>
-        <div class="six columns article make-it-appear-left">
-          <!-- Title -->
-          <h3>Kakaotalk Open Chat</h3>
-          <!-- Content -->
-          <p>We talk every single day here <b>whatever you want</b>.<br/>Come in and let's talk about our <b>Daily</b> stuff.</p>
-          <div class="space"></div>
-          <a class="button-green" target="_blank" href="https://open.kakao.com/o/g4f1Hvkb" >Move to openChat</a>
-        </div>
-      </div> <!-- End row div -->
-    </section>
-    <!-- END TIRTH SECTION ############################################### -->
-
-    <!-- Modal Window -->
-    <div class='modal' id='modal'>
-      <div class='modal-content modal-anim--three'>
-      <!-- <iframe src="//player.vimeo.com/video/64291127?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="560" height="306" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
-      </div>
-    </div>
-
-    <!-- FOURTH SECTION ############################################### -->
-    <section class="page4">
-      <div class="row">
-        <div class="four columns article make-it-appear-top">
-          <!-- Title -->
-          <h3>Contact me</h3>
-          <!-- Content -->
-          <p>If you have any questions or comments, please feel free to let me know.</p>
-          <div class="space"></div>
-        </div>
-        <!-- Image -->
-        <div class="seven columns email make-it-appear-top" >
-          <h3>Jongkeun.kr@gmail.com</h3>
-        </div>
-      </div> <!-- End row div -->
-    </section>
-    <!-- END FOURTH SECTION ############################################### -->
-
-    <!-- FIFTH SECTION ############################################### -->
-    <section class="page5">
-      <div class="row">
-        <!-- Article centered on the Page -->
-        <div class="twelve columns centered make-it-appear-top">
-          <!-- Title -->
-          <h4><b>No</b> Subscription fee.</h4>
-          <!-- Content -->
-        </div>
-      </div>
-    </section>
-    <!-- END FIFTH SECTION ############################################### -->
-
-    <!-- FOOTER SECTION ############################################### -->
-    <section class="footer">
-      <div class="row">
-        <!-- Article centered on the Page -->
-        <div class="nine columns centered">
-          <!-- Nav Footer -->
-          <ul>
-            <li> <a target="_blank" href="https://www.meetup.com/ko-KR/Songpa-Neighborhoods-in-Seoul/">Meetup</a> </li>
-            <li> <a target="_blank" href="https://open.kakao.com/o/g4f1Hvkb">KakaoTalk</a> </li>
-          </ul>
-          <!-- Title -->
-          <p class="copyright">© Copyright 2019 Jongkeun. All rights reserved.</p>
-          <!-- Logo -->
-          <img class="logo" src="img/logo.png" alt="Logo">
-        </div>
-      </div>
-    </section>
-    <!-- END FOOTER SECTION ############################################### -->
-
-  </div> <!-- end of container -->
-  <script src="js/jquery-1.9.1.min.js"></script>
-  <script src="js/main.js" type="text/javascript"></script> 								<!-- Main Javascript File -->
-  <script src="js/classie.js" type="text/javascript"></script> 								<!-- Scroll from left & right -->
-  <script src="js/waypoints.min.js" type="text/javascript"></script>						<!-- Waypoints -->
-  <script src="js/jquery.scrollto.js" type="text/javascript"></script> 						<!-- ScrollTo -->
-  <script src="js/mediaCheck.js" type="text/javascript"></script> 							<!-- MediaCheck -->
-</body>
-
-</html>
+{% include pagination.html %}
