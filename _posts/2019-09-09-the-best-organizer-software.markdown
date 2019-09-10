@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 메이저 개발자들과의 만남으로부터 얻은 것
-date: 2017-09-09 17:00:00 +0900
+date: 2019-09-09 17:00:00 +0900
 description: 3명의 유명 개발자들과의 만남으로부터 얻은 것 정리하기. # Add post description (optional)
 img: software.jpg # Add image post (optional)
 tags: [Productivity, Software] # add tag
