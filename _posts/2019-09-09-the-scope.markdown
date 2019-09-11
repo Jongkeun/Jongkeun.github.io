@@ -3,7 +3,7 @@ layout: post
 title: [Javascript] 전역변수 접근 제한 두기
 date: 2019-09-09 17:00:00 +0900
 description: 웹페이지에서 javascript 파일에 선언된 전역 변수에 대해 접근을 막는 방법 
-img: 2019-09/js-1.png 
+img: js-1.png 
 fig-caption: 
 tags: [Javascript, Software, Secure] 
 
