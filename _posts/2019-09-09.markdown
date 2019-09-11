@@ -1,0 +1,146 @@
+---
+layout: post
+title: [Javascript] 전역변수 접근 제한 두기
+date: 2019-09-09 17:00:00 +0900
+description: 웹페이지에서 javascript 파일에 선언된 전역 변수에 대해 접근을 막는 방법 
+img: 2019-09/js-1.png 
+fig-caption: 
+tags: [Javascript, Software, Secure] 
+
+---
+
+# #Scope 
+
+
+
+​	지난번에 만났던 시니어 개발자들이 '자바스크립트에 스코프 종류에 대해 알고 있는가?'라고 질문했다. 내가 알고 있던 scope 종류는 전역(Global) scope 와 지역(Local) scope 두 가지 였다. 어디서나 접근 할수 있는 가장 바깥 부분에 선언된 전역 변수와 함수 내부에 선언된 지역 변수에 접근할 수 있는 scope, 두가지 였다.
+
+​	시니어 개발자 분들은 File scope와 Function scope 라고 했다. 찾아보니 File scope 라는 용어는 잘 쓰이지 않는것 같고, Global scope를 말씀하셨던것 같다. Local이나 Function 이나 정해진 Block 안에서 접근 가능하다는 맥락으로 이해하면 될것 같다.
+
+
+
+[W3schools](https://www.w3schools.com/js/js_scope.asp)을 보니 Javascript에서 File scope라는 용어는 맞지 않는것 같다. 
+
+![1568186723955](../img/2019-09/1568186723955.png)
+
+
+
+### 스코프의 종류
+
+- Global scope : 어느 곳에서든지 접근 가능
+
+- Local scope : 블록으로 쌓여진 곳 안에서만 접근 가능
+
+  
+
+## Global scope
+
+```javascript
+var carName = "Volvo";
+
+// code here can use carName
+
+function myFunction() {
+
+  // code here can also use carName 
+
+}
+```
+
+​	위 코드의 `carName`은 어디서든지 접근이 가능하다. 이 때에 `carName`은 Global scope를 갖고 있다고 할 수 있다. 웹페이지 어디서든지 접근이 가능하다.
+
+
+
+## Local scope
+
+```js
+myFunction();
+
+// code here can use carName 
+
+function myFunction() {
+  carName = "Volvo";
+}
+```
+
+​	위 코드에서는 `carName`이 myFunction 함수 안에서만 접근이 가능하다.  이 때에 `carName`은 Local scope를 갖고 있다.
+
+
+
+
+
+# #전역 변수의 위험성
+
+​	전역변수를 사용하면 어디서든 접근 가능하다는 편리함이 있지만, 이 또한 단점으로 작용한다.
+
+아래와 같이 간단한 테스트 코드를 작성한다.
+
+**index.html**
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>test</title>
+</head>
+
+<body>
+  내 점수는
+  <script type="text/javascript" src="myscripts.js"></script>
+</body>
+
+</html>
+```
+
+
+
+**myscripts.js**
+
+```javascript
+let myPoint = 100;
+
+function print() {
+  console.log(`내 점수는 : ${myPoint}`);
+}
+```
+
+
+
+`print();`를 입력하면 `print` 함수가 호출이 되고 `myPoint`값이 출력된다.
+
+![1568188648106](../img/2019-09/1568188648106.png)
+
+`myPoint`의 값은 Global scope를 갖기 때문에 어디서든지 수정할 수 있다.
+
+
+
+![1568188851085](../img/2019-09/1568188851085.png)
+
+위 그림과 같이 `myPoint`에 0을 대입하고 `print()`를 호출하면 점수가 0점으로 변한것을 확인할 수 있다.
+
+
+
+# 해결방법
+
+​	javascript 내에 선언 된 변수와 함수를 외부에서 사용하지 못하기 위해 익명함수로 js 파일 내부를 감싸준다.
+
+
+
+**myscripts.js**
+
+```javascript
+(
+  function () {
+    let myPoint = 100;
+
+    function print() {
+      console.log(`내 점수는 : ${myPoint}`);
+    }
+  }
+) ();
+```
+
+위와 같이 선언을 하면 Local scope가 적용되기 때문에 외부에서의 접근이 불가하여 안전한 코드를 사용 할 수 있다.
+
