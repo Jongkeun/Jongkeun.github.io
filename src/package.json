@@ -17,10 +17,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build",
+    "deploy": "mv ./build/* ../",
     "predeploy": "npm run build"
   },
-  "homepage": "https://jongkeun.github.io/",
+  "homepage": "./",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -35,8 +35,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^2.2.0"
   }
 }
