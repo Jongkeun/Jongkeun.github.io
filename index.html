@@ -1,19 +1,50 @@
----
-layout: main
----
-{% for post in paginator.posts %}
-<article class="post">
-  {% if post.img %}
-    <a class="post-thumbnail" style="background-image: url({{"/assets/img/" | prepend: site.baseurl | append : post.img}})" href="{{post.url | prepend: site.baseurl}}"></a>
-  {% else %}
-  {% endif %}
-  <div class="post-content">
-    <h2 class="post-title"><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h2>
-    <p>{{ post.content | strip_html | truncatewords: 15 }}</p>
-    <span class="post-date">{{post.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-    <span class="post-words">{% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: " minute read" }}{% endunless %}</span>
-  </div>
-</article>
-{% endfor %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>layout</title>
+    <style type="text/css">
+      body {
+        background-color: rgb(179, 128, 128);
+        margin: 10;
+      }
 
-{% include pagination.html %}
+      section {
+        display: flex;
+      }
+      .left {
+        display: inline-block;
+        position: relative;
+        background-color: rgb(206, 146, 74);
+        height: 80vh;
+        width: 30vw;
+      }
+      .right {
+        display: inline-block;
+        background-color: bisque;
+        height: 80vh;
+        width: 70vw;
+      }
+      footer {
+        background-color: rgb(23, 146, 19);
+        position: fixed;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      header
+    </header>
+    <section>
+      <div class="left">
+        <span>11</span>
+        <span>22</span>
+        <a>link</a>
+      </div>
+      <div class="right">11</div>
+    </section>
+    <footer>
+      footer
+    </footer>
+  </body>
+</html>
