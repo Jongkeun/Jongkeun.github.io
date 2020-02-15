@@ -7,7 +7,7 @@
 ### Plans what I will do
 
 - [x] [todo-list](https://github.com/Jongkeun/todo-list-react) (React)
-- [ ] todo-list (Typescript)
+- [x] [todo-list](https://github.com/Jongkeun/todo-list-typescript) (Typescript)
 - [x] [todo-list](https://github.com/Jongkeun/todo-list-svelte) (Svelt)
 - [ ] portfolio (React)
 - [ ] mihwanta (Svelt, Typescript, Graphql)
@@ -25,6 +25,7 @@
 - page layout (making many cases according to situation)
 - svg
 - server-side-rendering (ReactDOMServer), **Next.js**, deploy with `now`
+- serverless
 - code-splitting
 - Proptypes
 - Context
