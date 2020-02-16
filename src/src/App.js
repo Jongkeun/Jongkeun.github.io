@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <HashRouter>
-        <GlobalStyle backgroundImage />
+        <GlobalStyle />
         <Router />
       </HashRouter>
     </div>

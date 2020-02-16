@@ -5,7 +5,7 @@ import styled from "styled-components";
 const Section = styled.section`
   height: 100vh;
   background-image: ${props =>
-    props.welcome ? `url("./images/code_bg.png")` : "none"};
+    props.welcome ? `url("./images/code_bg.jpg")` : "none"};
   background-size: cover;
 `;
 
